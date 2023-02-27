@@ -7,12 +7,12 @@ class MainScreen:
 
     def __init__(self):
         pygame.init()  # Initialize the pygame
+        pygame.display.set_caption("Pong")  # Title
         self.width = 800
         self.height = 533
-        self.screen = pygame.display.set_mode((self.width, self.height))  # Create the screen
-        self.background = pygame.image.load('images/background.png')  # Background image
-        self.title = pygame.display.set_caption("Pong")  # Title
-        self.font = 'Georgia'  # maybe change
+        self.screen = pygame.display.set_mode((self.width, self.height))
+        self.background = pygame.image.load('images/background.png')
+        self.font = 'Georgia'
         self.default_color = 'pink'
         self.b_color = (232, 164, 71)
 
@@ -36,5 +36,4 @@ class MainScreen:
 
     def create_button(self, size, bold, text, button, x, y, b_color, d_color):
         self.change_button_color(button, x, y, b_color, d_color)
-        self.write_text(size, bold, text, button.x, button.y)
-
+        self.write_text(size, bold, text, button.x + 5, button.y + 5)

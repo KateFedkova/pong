@@ -1,16 +1,14 @@
-# pygame.time.delay() - pause the program for an amount of time
 import pygame
-from Rules.rules_scene import rules_scene
+from Rules import rules_scene
 from start_game import start_game
-from Game_Objects.objects_for_game import main_screen, paddle_1, paddle_2, ball
-
+from game_objects import main_screen, paddle_1, paddle_2, ball
 
 # Game Loop
 
 running = True
 
-button_rules = main_screen.draw_rect(330, 310, 170, 50)
-button_start = main_screen.draw_rect(340, 230, 140, 50)
+button_rules = main_screen.draw_rect(333, 310, 170, 50)
+button_start = main_screen.draw_rect(342, 230, 145, 50)
 
 while running:
 
@@ -35,9 +33,9 @@ while running:
     main_screen.change_button_color(button_start, x, y)
 
     main_screen.write_text(33, True, 'Pong Game', 315, 80)
-    main_screen.write_text(30, False, 'Игра на двоих', 311, 150)
+    main_screen.write_text(30, False, 'Гра на двох', 330, 150)
 
     main_screen.write_text(33, True, 'Правила', button_rules.x + 5, button_rules.y + 5)
-    main_screen.write_text(33, True, 'Начать',  button_start.x + 5, button_start.y + 5)
+    main_screen.write_text(33, True, 'Почати',  button_start.x + 5, button_start.y + 5)
 
     pygame.display.update()

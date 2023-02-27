@@ -1,9 +1,9 @@
 import pygame
-from Game_Objects.objects_for_game import rule
+from game_objects import rule
 
 
 def rules_scene():
-    button_to_game = rule.main_screen.draw_rect(240, 360, 330, 50)
+    button_to_game = rule.main_screen.draw_rect(220, 360, 385, 50)
     running = True
 
     while running:
@@ -20,9 +20,9 @@ def rules_scene():
 
         x, y = pygame.mouse.get_pos()
 
-        rule.main_screen.create_button(rule.text_size, rule.text_bold, 'Вернуться на главное меню', button_to_game, x, y, (86, 183, 47), rule.b_color)
+        rule.main_screen.create_button(rule.text_size, rule.text_bold, 'Повернутися до головного меню', button_to_game, x, y, (86, 183, 47), rule.b_color)
 
-        rule.create_rect_with_text('1. Игра продолжается до 11 пропущенных одним игроком', rule.main_screen.draw_rect(80, 150, 682, 50))
-        rule.create_rect_with_text('2. Из игры можно выйти в любой момент', rule.main_screen.draw_rect(150, 230, 500, 50))
+        rule.create_rect_with_text('1. Гра триває до 11 пропущених одним гравцем', rule.main_screen.draw_rect(130, 150, 560, 50))
+        rule.create_rect_with_text('3. З гри можна вийти будь-якої миті', rule.main_screen.draw_rect(190, 230, 435, 50))
 
         pygame.display.update()
